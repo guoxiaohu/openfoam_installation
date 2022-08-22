@@ -13,6 +13,18 @@ export version="v2206"
 # wget https://sourceforge.net/projects/openfoam/files/v2006/OpenFOAM-v2006.tgz
 # wget https://sourceforge.net/projects/openfoam/files/v2006/ThirdParty-v2006.tgz
 
+git clone https://develop.openfoam.com/Development/openfoam.git ./OpenFOAM-${version}-profiling
+cd ./OpenFOAM-${version}-profiling
+git checkout tags/OpenFOAM-v2206 -b openfoam-v2206
+
+cd ..
+
+git clone https://develop.openfoam.com/Development/ThirdParty-common.git ./ThirdParty-${version}
+cd ThirdParty-${version}
+git checkout tags/v2206 -b v2206
+
+cd ..
+
 #git clone https://develop.openfoam.com/Development/openfoam.git ./openfoam-prof
 #git clone https://develop.openfoam.com/Development/ThirdParty-common.git ./ThirdParty-common-prof
 # tar zxf OpenFOAM-${version}.tgz
