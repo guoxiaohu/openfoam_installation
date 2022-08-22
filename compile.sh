@@ -4,8 +4,13 @@
 # I make the dependencies first.
 
 cd OpenFOAM-v2206-profiling
-#source ../site_profiling/modules.sh
+source ../site_profiling/modules.sh
+
+# install.sh should be only run once
+source ../site_profiling/install.sh
+
 source ./etc/bashrc
+
 
 
 ./Allwmake -j 16 dep
